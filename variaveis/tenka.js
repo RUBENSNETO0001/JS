@@ -18,3 +18,12 @@ var nome ="thiago"
 console.log("olá, "+ nome)
 
 prompt("qual e seu nome?")// vai na janela do site, serve para pergunta ao usuario 
+
+
+var preco = 101;
+if (preco > 100){
+alert("desconto liberado");// vai imprimir "desconto liberado"
+}
+else{
+    alert("nenhum desconto foi liberado");
+}
