@@ -27,3 +27,8 @@ alert("desconto liberado");// vai imprimir "desconto liberado"
 else{
     alert("nenhum desconto foi liberado");
 }
+
+var nome = "hiago"
+var idade = 22
+
+document.write("meu nome é $(nome)")
