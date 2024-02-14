@@ -41,3 +41,4 @@ else if (idade && possuicarteira =="não") {
 else {
     document.write("nao tem idade para isso")
 }
+gf

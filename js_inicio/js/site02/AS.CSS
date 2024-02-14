@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    margin-top: 260px;
+margin-left: 440px;
+}
+form{
+    text-align: center;
+    color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgb(255, 255, 255);
+        width: 500px;
+        padding: 10px;
+        gap: 8px;
+        background-image: linear-gradient(rgb(174, 0, 255), rgb(11, 1, 46)) ; 
+     }
+  a{
+      width: 100px;
+    color: #ffffff;
+     display: flex;
+     justify-content: center;
+     padding: 5px;
+     border-radius: 5px;
+     box-shadow: 3px 6px #ffffff;
+     font-weight: bold;
+     margin-left: 38%;
+     text-decoration: none;
+  }
+   

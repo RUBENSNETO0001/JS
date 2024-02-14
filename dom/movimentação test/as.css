@@ -1,0 +1,7 @@
+#elemento{
+    position: relative;
+    left: 0;
+    top: 70px;
+    transition: left 0.7s ease;
+  
+}

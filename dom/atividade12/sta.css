@@ -1,0 +1,26 @@
+#listaProdutos {
+    display: flex;
+    
+    justify-content: center; 
+}
+
+.produto {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.btn {
+    padding: 10px;
+    background-color: rgb(73, 73, 73);
+    color: #ffffff;
+}

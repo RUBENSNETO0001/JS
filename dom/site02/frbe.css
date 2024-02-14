@@ -1,0 +1,20 @@
+body{
+    color: rgb(255, 255, 255);
+
+ margin-top: 17%;
+}
+form{
+    text-align: center;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid rgb(184, 0, 184);
+        width: 500px;
+        padding: 10px;
+        gap: 8px;
+        background-image: linear-gradient(rgb(174, 0, 255), rgb(11, 1, 46)) ; 
+        margin-left: 440px;
+     }
+     a{
+        color: aliceblue;
+        text-decoration: none;
+     }

@@ -1,0 +1,17 @@
+input{
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+}
+
+form{
+    margin-left: 21%;
+    margin-top: 15%;
+    
+}
+label{
+    margin-left: 65px;
+}
+button{
+    margin-left: 60px;
+}
