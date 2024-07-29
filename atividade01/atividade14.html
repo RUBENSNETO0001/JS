@@ -1,0 +1,17 @@
+<script>
+let random = Math.floor(Math.random() * 1000);
+let numero = prompt('Digite um numero');
+
+if(numero == random){
+    alert(`seu valor e igual ao random`);
+}
+else if(numero < random){
+    alert(`seu valor e menor ao random, eu pensei nesse ${random}`);
+}
+else if(numero > random){
+    alert(`seu valor e maior ao random, eu pensei nesse ${random}`);
+}
+else {
+   alert(`o valor aplicado não e o mesmo que vc digito, eu pensei nesse ${random}`);
+}
+</script>

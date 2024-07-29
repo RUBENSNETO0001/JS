@@ -1,0 +1,30 @@
+<title>test03</title>
+
+<body>
+    <form>
+        <nav>
+            <input type="email" id="email">
+            <input type="password" id="senha">
+            <input type="button" value="enviar" onclick="envio()">
+        </nav>
+    </form>
+</body>
+<script>
+    function envio() {
+        let email_user = document.getElementById('email').value
+        let senha_user = document.getElementById('senha').value
+        let nucleo = [];
+
+        if (email_user && senha_user) {
+            alert("deu bom mano")
+            document.write(nucleo);
+            nucleo = email_user && senha_user;
+            
+            return nucleo;
+        }
+        else {
+            alert("Não deu de guardan suas informações.")
+        }
+    }
+
+</script>

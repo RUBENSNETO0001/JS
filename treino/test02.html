@@ -1,0 +1,46 @@
+<script>
+    alert("formulario test")
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <h1>Formulario</h1>
+        </div>
+        <nav>
+            <label>Nome</label>
+            <input type="text" id="nome" placeholder="coloque seu nome">
+            <label>idade</label>
+            <input type="number" id="idade" placeholder="digite sua idade">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="coloque seu email">
+            <label>Senha</label>
+            <input type="password" id="senha" placeholder="digite uma senha">
+            <input type="button" value="enviar" onclick="formulario()">
+        </nav>
+    </form>
+</body>
+</html>
+<script>
+function formulario(){
+    let nome_user = document.getElementById('nome').value;
+    let idade_user = document.getElementById('idade').value;
+    let email_user = document.getElementById('email').value;
+    let senha_user = document.getElementById('senha').value;
+
+    document.write(nome_user, "<br>");
+    document.write(idade_user, "<br>");
+    document.write(email_user, "<br>");
+    document.write(senha_user);
+}
+
+</script>

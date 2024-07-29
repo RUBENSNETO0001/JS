@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login / resgistro</title>
+</head>
+
+<body>
+    <script>// basicamente to pedindo as informações através do ID</script>
+    <input type="text" name="nome" id="nome" placeholder="nome">
+    <input type="email" name="email" id="email" placeholder="coloque seu email">
+    <input type="password" name="senha" id="senha" placeholder="coloque uma senha">
+    <script>// basicamente to enviando para um function pelo onclick e declarando com onde ir com o enviador()</script>
+    <input type="button" value="enviar" onclick="enviador()">
+
+    <script>
+
+        // fazendo uma array para a indentificar qual vai pode entrar
+        let conta_oficial = [nome01 = 'Rubens', email01 = 'rubensnetomartinssuarezneto@gmail.com', senha01 = 'ruren100'];
+
+        // iniciando o function
+        function enviador() {
+
+            //Declarando as variaveis com o ID
+            let nome_user = document.getElementById('nome').value
+            let email_user = document.getElementById('email').value
+            let password_user = document.getElementById('senha').value
+
+            // Dando escolha if e else; pode ser alterado para entrar em outra pagina.
+            if (nome_user == nome01 && email_user == email01 && password_user == senha01) {
+                alert("deu bom senhor " + nome_user);
+            }
+            else {
+                alert("user não encontrado");
+            }
+
+            /*Para ve se a informação ta indo{
+            document.write(nome_user, "\n");
+            document.write(email_user, "\n");
+            document.write(password_user);
+            }
+            */
+        }
+    </script>
+</body>
+
+</html>

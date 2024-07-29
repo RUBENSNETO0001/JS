@@ -1,0 +1,62 @@
+<script>
+function verificarPrimeiraPorta(codigo) {
+    return codigo.length === 4 && parseInt(codigo) % 2 === 0;
+}
+function verificarSegundaPorta(codigo) {
+    return codigo.spli('').sort().join('') === codigo;
+}
+function verificarTerceiraPorta(codigo) {
+    let digitos = codigo.replace(/[^0-9]/g, '').length;
+    let letras = codigo.replace(/[^a-zA-Z]/g, '').length;
+    return codigo.length === 6 && digitos >= 2 && letras >= 2;
+}
+
+function main() {
+    let codigoPorta1 = prompt("Digite o código para a primeira porta: ");
+    let codigoPorta2 = prompt("Digite o código para a segunda porta: ");
+    let codigoPorta3 = prompt("Digite o código para a terceira porta: ");
+
+    if (verificarPrimeiraPorta(codigoPorta1) && verificarSegundaPorta(codigoPorta2) && verificarTerceiraPorta(codigoPorta3)) {
+        alert("Acesso concedido! Todas as portas foram abertas corretamente.");
+    } else {
+        alert("Acesso negado! Alguma(s) porta(s) não foi(foram) aberta(s) corretamente.");
+    }
+}
+main();
+</script>
+
+//professor.
+<script>
+    //  Exemplos:
+    // const Porta1 = 2468;
+    // const Porta2 = "abcd";
+    // const Porta3 = "a1b2c3";
+    
+    // Exemplo de uso:
+    const porta1 = prompt(parseInt("Digite seu código"));
+    const porta2 = prompt("Digite seu código");
+    const porta3 = prompt("Digite seu código");
+    
+    function verificarAcesso(porta1, porta2, porta3) {
+        // Verificar porta 1
+        if (porta1 % 2 !== 0) {
+            return "Acesso negado! Código da primeira porta inválido.";
+        }
+    
+        // Verificar porta 2
+        if (!porta2.match(/^[a-zA-Z]+$/) || porta2 !== porta2.split('').sort().join('')) {
+            return "Acesso negado! Código da segunda porta inválido.";
+        }
+    
+        // Verificar porta 3
+        const digitos = porta3.match(/\d/g);
+        const letras = porta3.match(/[a-zA-Z]/g);
+       
+        if (!digitos || !letras || digitos.length < 2 || letras.length < 2 || porta3.length !== 6) {
+            return "Acesso negado! Código da terceira porta inválido.";
+        }
+        // Acesso permitido se chegou até aqui
+        return "Acesso liberado! Todas as portas foram abertas corretamente.";
+    }
+    alert(verificarAcesso(porta1, porta2, porta3));
+    </script>

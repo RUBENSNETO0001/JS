@@ -1,0 +1,18 @@
+<script>
+    var f = Number(prompt("digite temperatura"));
+    let opcao = prompt('digite F para Fahrenheit ou C para Celsius');
+
+    let ca = 5 * (f - 32) / 9;
+    let fa = ca + 1.8 + 32;
+ 
+
+    if (opcao == "f" || opcao == "F") {
+        alert("temperatura em " + fa + " Fahrenheit");
+    }
+    else if (opcao == "c" || opcao == "C") {
+        alert("temperatura em " + ca+ " Celsius");
+    }
+    else {
+      alert("comando incorreto");
+    }
+</script>
