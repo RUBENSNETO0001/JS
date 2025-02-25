@@ -1,11 +1,11 @@
-var nome ="gosto?"
+var nome = "gosto?"
 console.log(nome)
 
 var numero = 13.56
-document.write(numero )
+document.write(numero)
 
 var idade = 14
-document.write(", "+ idade)
+document.write(", " + idade)
 
 var name = "ruren"
 document.write(", " + name)

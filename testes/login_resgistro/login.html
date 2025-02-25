@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
 </head>
+
 <body>
     <div>
         <nav>
@@ -15,21 +17,19 @@
         </nav>
     </div>
 </body>
+
 </html>
 <script src="resgistro.html">
-   
-function opload(){
+    function opload() {
+        let email_usuario = document.getElementById('email').value
+        let senha_usuario = document.getElementById('password').value
+        let login = resgistrado(nickname, email_user, senha_user);
 
- let email_usuario = document.getElementById('email').value
- let senha_usuario = document.getElementById('password').value
- let login = resgistrado(nickname , email_user , senha_user);
-
-    if(email_usuario && senha_user == login){
-        alert("bem vindo");
+        if (email_usuario && senha_user == login) {
+            alert("bem vindo");
+        }
+        else {
+            alert("não valido")
+        }
     }
-    else{
-        alert("não valido")
-    }
-}
-    </script>
 </script>

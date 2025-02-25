@@ -29,16 +29,15 @@ else {
 }
 */
 
-var idade = Number( prompt("digite idade?"))
-var possuicarteira =( prompt("vc tem carteira?"))
+var idade = Number(prompt("digite idade?"))
+var possuicarteira = (prompt("vc tem carteira?"))
 
 if (idade >= 18 && possuicarteira == "sim") {
     document.write("pode dirigir")
 }
-else if (idade && possuicarteira =="não") {
+else if (idade && possuicarteira == "não") {
     document.write("vc tem idade mais nao tem carteira")
 }
 else {
     document.write("nao tem idade para isso")
 }
-gf
