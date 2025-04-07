@@ -1,0 +1,37 @@
+<script>
+    function soma(num1, num2){
+        alert (num1 + num2);
+    }
+    function mult(num1, num2){
+        alert (num1 * num2);
+    }
+    function subtracao(num1, num2){
+        alert (num1 - num2);
+    }
+    function divisao(num1, num2){
+        alert (num1 / num2);
+    }
+    while(true){
+        let num1 = Number(prompt('Me informe um numero: '));
+        let num2 = Number(prompt('Me informe um outro numero: '));
+        let formulaMat = Number(prompt('Que tipo de soma vc deseja\n\n1 - soma;\n2 - multiplicação\n3 - subtração\n4-divisão;\n5 - Sair'));
+
+        if(formulaMat == 1){
+            soma(num1,num2);
+        }
+        else if(formulaMat == 2){
+            mult(num1,num2);
+        }
+        else if(formulaMat == 3){
+            subtracao(num1,num2);
+        }
+        else if(formulaMat == 4){
+            divisao(num1,num2);
+        }
+        else{
+            alert('Adeus!!');
+            break;
+        }
+    }
+
+</script>

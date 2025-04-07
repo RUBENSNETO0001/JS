@@ -1,0 +1,48 @@
+<body>
+    <!-- Desafio: Simulador de Caixa Eletrônico
+Crie um programa que simule um caixa eletrônico.
+
+Regras do programa:
+O usuário começa com um saldo inicial (por exemplo, R$ 1000,00).
+O programa exibe um menu com opções:
+1 - Saldo (Mostra o saldo atual)
+2 - Sacar (Permite retirar um valor, se houver saldo suficiente)
+3 - Depositar (Adiciona um valor ao saldo)
+4 - Sair (Finaliza o programa)
+Se o usuário tentar sacar mais do que tem na conta, o programa exibe uma mensagem de erro.
+O programa só encerra quando o usuário escolher a opção "4 - Sair".
+
+Extras (para mais desafio):
+Implementar validação de valores (impedir saques ou depósitos negativos).
+Criar um histórico de transações.
+Exibir um recibo das últimas operações antes de sair. 
+-->
+</body>
+<script>
+    let saldo = 1100;
+    while(true){
+        let numero = Number(prompt(`Menu\n1 - Saldo;\n2 - Sacar;\n3 - Depositar;\n4 - Sair;`));
+        if(numero == 1){alert(`Saldo Atual: ${saldo}`);}
+        else if(numero == 2){
+            alert(`Saldo Atual: ${saldo}`);
+            let sacar = Number(prompt("Quanto deseja retirar do saldo: "));
+            if(sacar > saldo){alert("Error a Sacar");}
+            else if(sacar < 1){alert("Error, valor não valido!!");}
+            else{
+                saldo -= sacar;
+                alert(`Saldo Atual ${saldo}`);
+            }
+        }
+        else if(numero == 3){
+            alert(`Saldo Atual: ${saldo}`);
+            let Depositar = Number(prompt("Quanto deseja depositar do saldo: "));
+            if(Depositar < 1){alert("Error, valor não valido para deposito!!");}
+            else{saldo += Depositar;}
+        }
+        else if(numero == 4){
+            alert("Sair do Programa");
+            break;
+        }
+        else{alert('Comando não achado!!');}
+    }
+</script>

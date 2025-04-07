@@ -1,0 +1,39 @@
+<Script>
+    let tarefas = [];
+
+    while (true) {
+        let menu = Number(prompt("Menu de lista\n\n1 - Adicionar\n2 - Vê Lista\n3 - Remover\n4 - Sair"));
+
+        if (menu == 1) {
+            let item = prompt("Me informe o nome da tarefa: ");
+            tarefas.push({ item: item });
+        }
+        else if (menu == 2) {
+            let lista = [];
+            alert('ve lista');
+            for (let i = 0; i < tarefas.length; i++) {
+                lista += tarefas[i].item + '\n';
+            }
+            alert(`${lista}`)
+        }
+        else if (menu == 3) {
+            let remover = prompt('Me informe a tarefa a ser removida da lista');
+
+            for (let i = 0; i < tarefas.length; i++){
+                if(remover === tarefas[i].item){
+                    tarefas.splice(i,1);
+                }
+                else{
+                    alert("Tarefa Não encontrada");
+                }
+            }
+        }
+        else if (menu == 4) {
+            alert("Sair do menu");
+            break;
+        }
+        else {
+            alert('Numero não encontrado');
+        }
+    }
+</Script>

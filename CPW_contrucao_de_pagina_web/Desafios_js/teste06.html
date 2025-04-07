@@ -1,0 +1,54 @@
+<!-- Desafio: Gerenciador de Contatos
+Crie um sistema simples de gerenciamento de contatos usando JavaScript.
+
+✅ Regras:
+1️⃣ O usuário pode adicionar contatos, informando nome e telefone.
+2️⃣ O programa deve armazenar os contatos em um array de objetos.
+3️⃣ O usuário pode listar todos os contatos cadastrados.
+4️⃣ O usuário pode remover um contato, informando o nome.
+5️⃣ Criar um menu interativo com as opções:
+
+1 - Adicionar contato
+2 - Listar contatos
+3 - Remover contato
+4 - Sair
+
+🚀 Bônus (Desafios Extras)
+🔹 Não permitir adicionar contatos duplicados.
+🔹 Exibir mensagem de erro se tentar remover um contato que não existe.
+🔹 Permitir buscar um contato pelo nome. -->
+<script>
+    let contatos = [];
+
+    while (true) {
+        let menu = Number(prompt('Menu de contatos\n\n1 - Adicionar contato\n2 - Listar contatos\n3 - Remover contato\n4 - Sair'));
+
+        if (menu == 1) {
+            let nome = prompt("Me Informe o nome do contato: ");
+            let numero = Number(prompt("me informe o numero do contato!!"));
+
+            contatos.push({ nome: nome, numero: numero });
+        }
+        else if (menu == 2) {
+            let listaContatos = [];
+            for (let i = 0; i < contatos.length; i++) {
+                listaContatos += 'Nome do contato: ' + contatos[i].nome + ' | Numero do contato: ' + contatos[i].numero + '\n';
+            }
+            alert(`Lista de contatos\n${listaContatos}`);
+        }
+        else if(menu == 3){
+            let remover = prompt('Me informe o nome do contato a ser removido!!');
+
+            for(let i = 0; i < contatos.length; i++){
+                if(remover === contatos[i].nome){
+                    contatos.splice(i,1);
+                    alert('contato removido');
+                }
+            }
+        }
+        else if (menu == 4) {
+            alert("Deseja sair da lista de contatos!!");
+            break;
+        }
+    }
+</script>

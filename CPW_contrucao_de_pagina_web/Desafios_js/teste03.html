@@ -1,0 +1,61 @@
+<!-- Desafio: Sistema de Cadastro de Contatos
+Crie um programa que funcione como um sistema simples de cadastro de contatos, onde o usuário pode:
+
+Adicionar um novo contato com o nome e número de telefone.
+Ver todos os contatos cadastrados.
+Buscar um contato pelo nome.
+Deletar um contato pelo nome.
+Sair do programa.
+Requisitos:
+Os contatos devem ser armazenados em um array de objetos. Cada objeto deve conter as propriedades nome e telefone.
+O programa deve mostrar um menu com as opções acima e permitir que o usuário escolha qual ação deseja realizar.
+A operação de busca deve retornar o contato completo (nome e telefone) ou uma mensagem dizendo que o contato não foi encontrado.
+A operação de deletar deve remover o contato pelo nome.
+O programa deve validar as entradas para garantir que o nome não esteja vazio e que o telefone seja válido (você pode validar um telefone simples, por exemplo, um número de 11 dígitos). -->
+
+<script>
+    contato = [];
+
+    while(true){
+        let numero = Number(prompt("Menu Contatos\n\n1 - Adicionar;\n2 - Ver Contatos;\n3 - Buscar;\n4 - Deletar;\n5 - Sair."));
+        
+        if(numero == 1){
+            let nome = prompt("Me informe o nome do contato: ");
+            let numero = Number(prompt('Me informe o numero do contato:'));
+
+            contato.push({nome: nome, numero: numero});
+        }
+        else if(numero == 2){
+            for(let i = 0; i < contato.length; i++){
+                alert(`Nome do contato: ${contato[i].nome}\nNumero do contato: ${contato[i].numero}`);
+            }
+        }
+        else if(numero == 3){
+            let nomeProcurar = prompt("Me informe o nome a procurar");
+            for(let i = 0; i < contato.length; i++){
+                if(nomeProcurar === contato[i].nome){
+                    alert(`Nome do contato: ${contato[i].nome}\nNumero do contato: ${contato[i].numero}`);
+                }
+                else{
+                    alert('Contato Não encontrado');
+                }
+            }
+        }
+        else if(numero == 4){
+            let contatoDelete = prompt("Me informe o nome a ser deletado!!");
+            
+            for(let i = 0; i < contato.length; i++){
+                if (contatoDelete === contato[i].nome){
+                    contato.splice(i, 1);
+                }
+                else{
+                    alert('Contato Não encontrado');
+                }
+            }
+        }
+        else if(numero == 5){
+            alert("Sair do programa!!");
+            break;
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+<script>
+    let random = Math.floor(Math.random() * 100) + 1;
+    let tentativas = 0;
+
+    while(true){
+        let number_user = Number(prompt("Me informe um numero: "));
+
+        if(random === number_user){
+            alert('You win!!');
+            alert(`Quantidade de vezes até o you win!!  -[${tentativas}]- `);
+            break;
+        }
+        else if(tentativas === 10){
+            alert('Ja tentou 10 vezes!, Game Over');
+            break;
+        }
+        else{
+            if(number_user > random){
+                alert("Muito alto! Tente um número menor.");
+            }
+            else{
+                alert("Muito baixo! Tente um número maior.");
+            }
+            tentativas +=1;
+        }
+    }
+</script>

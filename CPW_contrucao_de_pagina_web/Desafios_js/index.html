@@ -1,0 +1,31 @@
+<script>
+    let alunos = [];
+
+    while (true){
+        let nomeAluno = prompt('Qual e o nome do aluno: ');
+        let nota01 = Number(prompt('Me informe a nota do 1 semestre: '));
+        let nota02 = Number(prompt('Me informe a nota do 2 semestre: '));
+        let nota03 = Number(prompt('Me informe a nota do 3 semestre: '));
+        let notafinal = (nota01 + nota02 + nota03) / 3;
+        
+        function resultado(notafinal){
+            if(notafinal > 7){return 'Aprovado';}
+            else if(notafinal > 5 && notafinal < 6.9){return 'Recuperação';}
+            else{return 'Reprovado'};
+        }
+        let resultado02 = resultado();
+        alunos.push({nome: nomeAluno, nota: notafinal , passou: resultado02})
+
+        let sair = prompt("Que colocar mais 1 aluno: (s ou n)")
+
+        if(sair == 'n'){break;}
+    }
+    if(true){
+        for (let i = 0 ; i < alunos.length; i++){
+            document.write("Nome do aluno: "+ alunos[i].nome);
+            document.write("<br>Nota Final do aluno: "+ alunos[i].nota.toPrecision(2));
+            document.write("<br>Resultado Final do aluno: "+ alunos[i].passou);
+            document.write("<hr>");
+        }
+    }
+</script>
