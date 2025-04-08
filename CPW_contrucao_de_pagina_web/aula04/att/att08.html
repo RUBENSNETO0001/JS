@@ -1,0 +1,16 @@
+<script>
+    /*8) Faça um programa que crie um array com 50 números aleatórios de 0 a 100 e calcule a média dos elementos. */
+    let numerosAleatorios = [];
+    let soma = 0;
+
+    for(let i = 0; i < 50; i++){
+        numerosAleatorios[i] = Math.floor(Math.random()*100)+1;
+    }
+    for(let l = 0; l < numerosAleatorios.length; l++){
+        document.write(`${numerosAleatorios[l]}, `);
+    }
+    for(let k = 0; k < numerosAleatorios.length; k++){
+        soma += numerosAleatorios[k];
+    }
+    alert(soma/numerosAleatorios.length);
+</script>

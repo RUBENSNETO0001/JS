@@ -1,0 +1,14 @@
+<script>
+    /*7 ) Faça um programa que crie um array com 50 números aleatórios de 0 a 100 e mostre o maior número. */
+
+    let numeroAletorio = [];
+    let numeroMaior = numeroAletorio[0];
+
+    for(let i = 0; i < 50; i++){numeroAletorio = Math.floor(Math.random()*100)+1;}
+
+    for(let k = 0; k < numeroAletorio.length; k++){
+        if(numeroAletorio[k] > numeroAletorio){numeroMaior = numeroAletorio[k];}
+    }
+    alert(`Numero maior ${numeroMaior}`);
+    document.write(`numeros seleionados ${numeroAletorio}`)
+</script>

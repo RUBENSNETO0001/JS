@@ -1,0 +1,27 @@
+<script>
+/*2) Faça um programa onde o usuário digite sua altura e peso e o programa calcula o seu IMC.*/
+
+let altura = Number(prompt("Me informe a sua altura: "));
+let peso = Number(prompt("Me informe a seu peso: "));
+imc = peso/(altura*altura).toPrecision(4);
+alert(`O IMC é ${(peso/(altura*altura)).toPrecision(4)}`);
+
+if(imc < 18.5){
+    alert(`Resultado: Abaixo do normal`);
+}
+else if(imc > 18.6 || imc < 24.9){
+    alert(`Resultado: Normal`);
+}
+else if(imc > 25 || imc < 29.9){
+    alert(`Resultado: Sobrepeso`);
+}
+else if(imc > 30 || imc < 34.9){
+    alert(`Resultado: Obesidade grau I`);
+}
+else if(imc > 35 || imc < 39.9){
+    alert(`Resultado: Obesidade grau II`);
+}
+else if(imc > 40){
+    alert(`Resultado: Obesidade grau III`);
+}
+</script>

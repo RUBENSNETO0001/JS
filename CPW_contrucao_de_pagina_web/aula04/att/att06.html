@@ -1,0 +1,14 @@
+<script>
+    /*6) Faça um programa que leia uma frase e uma palavra. O programa deve dizer se a palavra existe na frase. O programa deve considerar as diferenças de caixa alta e baixa, por exemplo: "Casa" é diferente de "casa"*/
+    let frase = prompt('Me informe uma frase: ');
+    let palavra = prompt('Me informe uma palavra: ');
+
+    let posicao = frase.indexOf(palavra);
+    
+    if(posicao !== -1){
+        alert('sim, e uma palavra existente na frase');
+    }
+    else{
+        alert('Nao e uma palavra existente');
+    }
+</script>
