@@ -1,17 +1,18 @@
-const nome = {};
-let resposta = '';
+let votos = {};
+let nomes = prompt("Me de um nome:");
+let totalVotacoes = 20; // Número de votos que o sistema vai simular
 
-while (true) {
-    resposta = prompt("Me informe um nome:");
-    
-    if (resposta == "n") { break; }
+for (let i = 0; i < totalVotacoes; i++) {
+  let voto = nomes[Math.floor(Math.random() * nomes.length)];
 
-    for (let i = 0; i < 1; i++) {
-        if (nome[resposta]) {nome[resposta]++;}
-        else {nome[resposta] = 1;}
-    }
+  if (votos[voto]) {
+    votos[voto]++;
+  } else {
+    votos[voto] = 1;
+  }
 }
 
-for (const nomes in nome){
-    console.log(`Nome: ${nomes} - Votos: ${nome[nomes]}`);
+console.log("Resultado da votação:");
+for (let nome in votos) {
+  console.log(`${nome} - ${votos[nome]} votos`);
 }
